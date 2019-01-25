@@ -1,0 +1,150 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+button {
+    cursor:pointer;
+    min-width: 40%;
+    transition:0.2s;
+    color:black;
+    background-color:lightgrey;
+}
+button:hover {
+    transition:0.2s;
+    color:white;
+    background-color:rgb(42, 42, 42);
+}
+
+/* Game Elements */
+.main-field {
+    position: relative;
+    border:5px solid grey;
+    background-color: whitesmoke;
+    font-family: sans-serif;
+    text-align: center;
+    margin:10% auto;
+    overflow: hidden;
+}
+.init-screen, .game-results {
+    position: relative;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+}
+.init-screen h2 {
+    margin-top:15%;
+    margin-bottom:10%;
+    font-size:48px;
+}
+.init-screen button, .game-results button {
+    display:block;
+    margin:10px auto;
+    padding:5px 15px;
+    font-size:36px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.game-explain {
+    position:relative;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 9999;
+    background-color:antiquewhite;
+}
+.game-explain p {
+    padding:5% 30px 15% 30px;
+    font-size: 36px;
+    font-family: cursive;
+    font-weight: 600;
+}
+
+/* For Game Session */
+.char {
+    position: absolute; /* WARNING: elements' position will be reffered absolute to a parent only if a parent has exact position type (like relative, absolute, fixed...) ! */
+    display: inline-block;
+    box-sizing: border-box;
+    padding-bottom: 4px;
+    font-family:'Times New Roman', Times, serif;
+    font-size:36px;
+    font-weight: 600;
+    background-color:rgba(86, 189, 230, 0.4);
+    border-radius: 5px;
+    z-index:2;
+
+}
+    /* Game Table */
+.game-table {
+    position: absolute;
+    top:0;
+    left:80%;
+    width:20%;
+    border-collapse: collapse;
+    border:2px solid grey;
+    font-size:18px;
+    background-color: rgb(26, 44, 68);
+    z-index:1;
+}
+.game-table td:nth-child(1) {
+    color:rgb(204, 130, 32);
+    font-family: monospace;
+    font-weight: 700;
+}
+.game-time {
+    font-weight: 600;
+    color: lightcoral;
+}
+.game-score {
+    font-size:21px;
+    color: lightgreen;
+}
+.game-time, .game-score {
+    font-weight: 600;
+}
+.lifes-left {
+    font-weight: 900;
+    color: rgb(209, 41, 41);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.lifes-left div {
+    width: 16px;
+    height: 16px;
+    background-image: url('../img/heart.png');
+    background-size: cover;
+}
+
+    /* Results (also see above): */
+.game-results h2 {
+    margin: 10% 0 5%;
+    font-size:48px;
+}
+.game-results h3 {
+    font-size: 36px;
+}
+.game-results p {
+    padding: 10px 15px;
+    font-size: 24px;
+}
+.game-results p > span {
+    font-weight: 800;
+    padding:0 20px;
+    color: green;
+}
+.game-results button {
+    margin-top:5%;
+}
+    /* Setting Difficulty */
+.set-difficulty {
+    padding-top: 20px;
+    font-family: cursive;
+    font-size:18px
+}
+.set-difficulty input {
+    margin-left:15px;
+    background-color: tomato;
+}
